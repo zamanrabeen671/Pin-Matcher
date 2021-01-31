@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pin Generator</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="pin-generator half-width">
+                    <input id="pin-show" class="form-control" type="text">
+                    <button onclick="generatePin()"  class="generate-btn">Generate Pin</button>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="input-section half-width">
+                    <input id="typed-pin" class="form-control" type="text">
+                    <div class="numbers">
+                        <div id="digit-container" class="calc-body">
+                            <div class="calc-button-row">
+                              <div data-number class="button">7</div>
+                              <div data-number class="button">8</div>
+                              <div data-number class="button">9</div>
+                            </div>
+                            <div class="calc-button-row">
+                              <div data-number class="button">4</div>
+                              <div data-number class="button">5</div>
+                              <div data-number class="button">6</div>
+                            </div>
+                            <div class="calc-button-row">
+                              <div data-number class="button">1</div>
+                              <div data-number class="button">2</div>
+                              <div data-number class="button">3</div>
+                            </div>
+                            <div class="calc-button-row">
+                                <div class="button"><</div>
+                                <div data-number class="button">0</div>
+                                <div class="button">C</div>
+                            </div>
+                            <div>
+                                <button onclick="verifyPin()" type="submit" class="submit-btn">Submit</button>
+                                <p class="action-left">3 try left</p>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="notify-section">
+            <p id="incorrect-pin" class="notify">❌ Pin Didn't Match, Please try again</p>
+            <p id="correct-pin" class="notify">✅ Pin Matched... Secret door is opening for you</p>
+        </div>
+    </div>
+    <script src="script.js">
+
+    </script>
+</body>
+</html>
