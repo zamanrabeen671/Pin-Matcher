@@ -20,6 +20,19 @@ buttonContainer.addEventListener('click', function(event) {
       const typedInput = document.getElementById('typed-pin');
     typedInput.value = "";
     }
+    if(digit === '<') {
+      const typedInput = document.getElementById('typed-pin').value;
+      const InputNumber = parseInt(typedInput);
+      let delValue = InputNumber /10;
+      delValue = parseInt(delValue);
+      if(delValue <= 0) {
+        document.getElementById('typed-pin').value = ""
+      }
+      else{
+        document.getElementById('typed-pin').value = delValue;
+      }
+      
+    }
   }
   else{
     const typedInput = document.getElementById('typed-pin');
@@ -36,6 +49,16 @@ function verifyPin() {
   }
   else{
     displayMatch('none','block');
+
+    const submitBtn = document.getElementById('submitBtn');
+    let catchTryLeft = document.getElementById('try-left').innerText;
+    let TryLeft = parseInt(catchTryLeft);
+    TryLeft--;
+    if(TryLeft <= 0) {
+      submitBtn.disabled = true;
+    }
+    document.getElementById('try-left').innerText = TryLeft;
+
   }
  }
 
